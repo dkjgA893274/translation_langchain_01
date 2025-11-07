@@ -1,3 +1,14 @@
-streamlit==1.20.0
-langchain
-langchain-openai
+# Streamlit は古すぎると他依存と衝突しやすいので少し新しめに
+streamlit>=1.30,<2
+
+# pandas 1.5.x を使うなら NumPy は 1.26 系に固定
+pandas==1.5.3
+numpy==1.26.4
+
+# LangChain 系
+langchain>=0.2,<0.3
+langchain-openai>=0.1,<0.2
+
+# LangChain 新系が使う依存を念のため明示
+pydantic>=2,<3
+httpx>=0.24,<1
